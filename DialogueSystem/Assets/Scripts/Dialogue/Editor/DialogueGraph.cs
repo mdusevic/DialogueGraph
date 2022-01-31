@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEngine;
+using UnityEditor.UIElements;
 using UnityEngine.UIElements;
+using UnityEngine;
 
 public class DialogueGraph : EditorWindow
 {
@@ -18,6 +19,12 @@ public class DialogueGraph : EditorWindow
 
     private void OnEnable()
     {
+        ConstructGraphView();
+        GenerateToolbar();
+    }
+
+    private void ConstructGraphView()
+    {
         _graphView = new DialogueGraphView
         {
             name = "Dialogue Graph"
@@ -25,6 +32,19 @@ public class DialogueGraph : EditorWindow
         
         _graphView.StretchToParentSize();
         rootVisualElement.Add(_graphView);
+    }
+
+    private void GenerateToolbar()
+    {
+        Toolbar toolbar = new Toolbar();
+
+        Button nodeCreateButton = new Button(() => { _graphView.CreateNode("Dialogue Node"); })
+        {
+            text = "Create Node"
+        };
+        toolbar.Add(nodeCreateButton);
+
+        rootVisualElement.Add(toolbar);
     }
 
     private void OnDisable()
