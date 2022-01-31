@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d58d8fadb6adea4caad77cba64c7201, type: 3}
+  m_Name: New Narrative
+  m_EditorClassIdentifier: 
+  nodeLinks:
+  - baseNodeGUID: d3579fce-4215-4a41-ba2c-d309ee2229e6
+    portName: Next
+    targetNodeGUID: 6b1c038c-2ec0-48ba-b312-b4a35aa4fd31
+  - baseNodeGUID: 6b1c038c-2ec0-48ba-b312-b4a35aa4fd31
+    portName: hi
+    targetNodeGUID: fb46e472-acc2-4d42-a0e8-a847a07e4972
+  - baseNodeGUID: 6b1c038c-2ec0-48ba-b312-b4a35aa4fd31
+    portName: bai
+    targetNodeGUID: b10de0bd-c037-4fa1-8d04-5bfd8241891d
+  dialogueNodeData:
+  - GUID: b10de0bd-c037-4fa1-8d04-5bfd8241891d
+    dialogueText: goodbye
+    position: {x: 569, y: 251}
+  - GUID: fb46e472-acc2-4d42-a0e8-a847a07e4972
+    dialogueText: whats your name
+    position: {x: 569, y: 150}
+  - GUID: 6b1c038c-2ec0-48ba-b312-b4a35aa4fd31
+    dialogueText: Hi there kid
+    position: {x: 289, y: 188}
